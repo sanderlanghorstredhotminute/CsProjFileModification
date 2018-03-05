@@ -14,7 +14,7 @@ namespace VSIXProjectFileMod.ProjectFileModifiers
         #region Methods
 
         #region Static Methods
-
+        
         /// <summary>
         /// Modifies the specified filename.
         /// </summary>
@@ -148,7 +148,7 @@ namespace VSIXProjectFileMod.ProjectFileModifiers
         /// Sorts the project document.
         /// </summary>
         /// <param name="xmlDocument">The XML document.</param>
-        private static void MendProjectDocument(XDocument xmlDocument)
+        public static void MendProjectDocument(XDocument xmlDocument)
         {
             if (xmlDocument?.Root == null)
                 return;
