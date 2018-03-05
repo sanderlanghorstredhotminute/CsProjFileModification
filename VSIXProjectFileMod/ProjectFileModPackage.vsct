@@ -39,12 +39,22 @@
       <Group guid="guidProjectFileModPackageCmdSet" id="MyMenuGroup" priority="0x0600">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>
+      <Group guid="guidProjectFileModPackageCmdSet" id="ContextMenuGroup" priority="0x0000">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
     </Groups>
 
     <!--Buttons section. -->
     <!--This section defines the elements the user can interact with, like a menu command or a button
         or combo box in a toolbar. -->
     <Buttons>
+      <Button guid="guidProjectFileModPackageCmdSet" id="ProjectFileContextId" type="Button" priority="0x0100">
+        <Parent guid="guidProjectFileModPackageCmdSet" id="ContextMenuGroup"/>
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Format Projectfile</ButtonText>
+        </Strings>
+      </Button>
       <!--To define a menu group you have to specify its ID, the parent menu and its display priority.
           The command is visible and enabled by default. If you need to change the visibility, status, etc, you can use
           the CommandFlag node.
@@ -79,7 +89,9 @@
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidProjectFileModPackageCmdSet" value="{9891e30d-b58a-47ee-a43e-c15953f3ab4e}">
       <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="ContextMenuGroup" value="0x1040" />
       <IDSymbol name="ProjectFileCommandId" value="0x0100" />
+      <IDSymbol name="ProjectFileContextId" value="0x0200"/>
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{b67c6865-32a8-4244-87f7-55ce2ee22e8e}" >
